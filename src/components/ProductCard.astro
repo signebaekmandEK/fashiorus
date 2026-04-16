@@ -1,9 +1,10 @@
 ---
 const { product } = Astro.props;
+const imagePath = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`
 ---
 
 <article class="smallProduct">
-            <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="product image" />
+            <img src={imagePath} alt="product image" />
             <h3>{product.productdisplayname}</h3>
             <p class="subtle">Tshirts | Nike</p>
             <p class="price">DKK <span>1595</span>,-</p>
@@ -15,7 +16,16 @@ const { product } = Astro.props;
         </article>
 
         <style>
+            h3{
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color: rgb(71, 78, 104);
+                background-color: rgb(235, 231, 225);
+                font-size: 30px;
+                padding: 20px;
+            }
+            
             p{
-                color: royalblue;
+                color: rgb(68, 71, 81);
+                 padding: 0 20px;
             }
         </style>
